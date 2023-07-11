@@ -25,26 +25,30 @@ public class Population {
 
         System.out.println("Population Created");
 
-        this.initialize_genome();
-        this.initialize_fitnesses();
+        this.initializeGenome();
+        this.initializeFitnesses();
     }
 
-    private void initialize_genome() {
+    private void initializeGenome() {
+        genome = new ArrayList<List<Boolean>>();
+        for (int i = 0; i < populationSize; i++) {
+            // make a list with activatedProportion of True, rest False
+        }
         System.out.println("Genome Initialized");
     }
 
-    private void initialize_fitnesses() {
+    private void initializeFitnesses() {
         System.out.println("Fitnesses Initialized");
     }
 
-    private void reproductive_update() {
-        this.horizontal_gene_transfer();
+    private void reproductiveUpdate() {
+        this.horizontalGeneTransfer();
         System.out.println("HGT Completed");
         this.reproduce();
         System.out.println("Reproduced");
     }
 
-    private void horizontal_gene_transfer(){
+    private void horizontalGeneTransfer(){
     }
 
     private void reproduce(){
